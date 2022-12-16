@@ -1,5 +1,6 @@
 <?php
-
+// aggiungere questo path che lo fa comunicare con le route 
+use App\Http\Controllers\Guest\PageController; //<------
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('controller');
-})->name('controllerHome');
+Route::get(
+    '/',
+    [PageController::class, 'index']
+)->name('controllerHome');
