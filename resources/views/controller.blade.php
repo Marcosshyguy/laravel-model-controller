@@ -12,7 +12,10 @@
 <body>
     <h1>Test controller</h1>
     <ul>
-
+        @foreach ($movies as $movie)
+            {{-- oggetto o collezzione di oggetti ciò che arriva da model --}}
+            <li>{{ $movie->title }}</li>
+        @endforeach
     </ul>
 </body>
 
